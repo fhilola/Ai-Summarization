@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button";
+import { BgGradient, HeroSection } from "./ui/components";
 
 export default function Home() {
   return (
-    <div>
-      <Button variant={'outline'}>Click me</Button>
+    <div className="relative w-full">
+      <BgGradient />
+      <div>
+        <HeroSection />
+      </div>
     </div>
   );
 }
