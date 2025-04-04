@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function HeroSection() {
   return (
-    <section className="relative mx-auto flex flex-col items-center justify-center z-0 py-16 sm:py-20 lg:pb-28 transition-all animate-in lg:px-12 max-w-7xl">
+    <section className="relative mx-auto flex flex-col gap-4 items-center justify-center z-0 py-16 sm:py-20 lg:pb-28 transition-all animate-in lg:px-12 max-w-7xl">
       <div className="">
         <div className="relative p-[1px] overflow-hidden rounded-full bg-linear-to-r from-violet-200 via-violet-500 to-violet-800 animate-gradient-x group">
           <Badge
@@ -31,15 +31,15 @@ export function HeroSection() {
       <h2 className="text-lg sm:text-xl lg:text-2x text-center px-4 lg:px-0 lg:max-w-4xl text-gray-600">
         Get a beautiful summary reel of the document in seconds
       </h2>
-        <Button
-          variant={"link"}
-          className="text-white mt-6 text-base sm:text-lg lg:text-xl rounded-full px-8 sm:px-10 lg:px-12 py-6 sm:py-7 lg:py-8 lg:mt-16 bg-linear-to-r from-slate-900 to-violet-500 hover:from-violet-500 hover:to-slate-900 hover:no-underline font-bold shadow-lg transition-colors duration-300"
-        >
-          <Link href={"/#pricing"} className="flex items-center gap-2">
-            <span>Try Summary.ai</span>
-            <ArrowRight className="animate-pulse" />
-          </Link>
-        </Button>
+      <Button
+        variant={"link"}
+        className="text-white mt-6 text-base sm:text-lg lg:text-xl rounded-full px-8 sm:px-10 lg:px-12 py-6 sm:py-7 lg:py-8 lg:mt-16 bg-linear-to-r from-slate-900 to-violet-500 hover:from-violet-500 hover:to-slate-900 hover:no-underline font-bold shadow-lg transition-colors duration-300"
+      >
+        <Link href={"/#pricing"} className="flex items-center gap-2">
+          <span>Try Summary.ai</span>
+          <ArrowRight className="animate-pulse" />
+        </Link>
+      </Button>
     </section>
   );
 }
