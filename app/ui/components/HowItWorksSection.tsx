@@ -60,7 +60,7 @@ export function HowItWorksSection() {
 
         <div className="text-center mb-16">
           <h2 className="font-bold text-xl uppercase text-violet-500 mb-4">
-            How it works
+            How it workss
           </h2>
           <h3 className="font-bold text-3xl max-w-2xl mx-auto">
             Transform any PDF into and easy-to-digest summary in three simple
