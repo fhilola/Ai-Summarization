@@ -1,5 +1,6 @@
 import {
   BgGradient,
+  CTASection,
   DemoSection,
   HeroSection,
   HowItWorksSection,
@@ -15,6 +16,7 @@ export default function Home() {
         <DemoSection />
         <HowItWorksSection />
         <PricingSection />
+        <CTASection />
       </div>
     </div>
   );
