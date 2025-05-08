@@ -1,23 +1,45 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { MotionDiv, MotionH2, MotionP, MotionSection } from "./MotionWrapper";
+import { containerVariants, itemVariants } from "@/utils/constant";
+
+const buttonVariants = {
+  scale: 1.05,
+  transition: {
+    type: "spring",
+    stiffness: 300,
+    damping: 10,
+  },
+};
 
 export function CTASection() {
   return (
-    <section className="bg-gray-50 py-12">
+    <MotionSection
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="bg-gray-50 py-12"
+    >
       <div className="py-12 lg:py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="flex flex-col items-center justify-center gap-8 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <MotionH2
+              variants={itemVariants}
+              className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+            >
               Ready to Save Hours of Reading Time?
-            </h2>
-            <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            </MotionH2>
+            <MotionP
+              variants={itemVariants}
+              className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400"
+            >
               Transform lengthy documents into clear, actionable insights with
               our AI-powered summarizer.
-            </p>
+            </MotionP>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
-            <div>
+            <MotionDiv variants={itemVariants} whileHover={buttonVariants}>
               <Button
                 size={"lg"}
                 variant={"link"}
@@ -31,10 +53,10 @@ export function CTASection() {
                   <ArrowRight className="w-4 h-4 ml-2 animate-pulse" />
                 </Link>
               </Button>
-            </div>
+            </MotionDiv>
           </div>
         </div>
       </div>
-    </section>
+    </MotionSection>
   );
 }

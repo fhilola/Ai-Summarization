@@ -5,3 +5,5 @@ export { DemoSection } from "./DemoSection";
 export { HowItWorksSection } from "./HowItWorksSection";
 export { PricingSection } from "./PricingSection";
 export { CTASection } from "./CTASection";
+export { UploadHeader } from "./UploadHeader";
+export { UploadForm } from "./UploadForm";

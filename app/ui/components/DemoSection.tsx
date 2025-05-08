@@ -1,4 +1,5 @@
 import { Pizza } from "lucide-react";
+import { MotionH3 } from "./MotionWrapper";
 
 export function DemoSection() {
   return (
@@ -21,13 +22,18 @@ export function DemoSection() {
             <Pizza className="w-6 h-6 text-violet-500" />
           </div>
           <div className="text-center mb-16">
-            <h3 className="font-bold text-2xl max-w-2xl mx-auto px-4 sm:px-6">
+            <MotionH3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="font-bold text-2xl max-w-2xl mx-auto px-4 sm:px-6"
+            >
               Whatch how Summary.ai transforms{" "}
               <span className="bg-linear-to-r from-violet-500 to-violet-700 bg-clip-text text-transparent">
                 this Next.js course PDF
               </span>{" "}
               into an easy-to-read summary!
-            </h3>
+            </MotionH3>
           </div>
 
           <div className="flex items-center justify-center px-2 sm:px-4 lg:px-6 bg-red-400"></div>
